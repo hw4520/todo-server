@@ -20,7 +20,7 @@ public class TodoService {
         TodoEntity todoEntity = new TodoEntity();
         todoEntity.setTitle(request.getTitle());
         todoEntity.setOrder(request.getOrder());
-        todoEntity.setIsCompleted(request.getIsCompleted());
+        todoEntity.setCompleted(request.getCompleted());
         return this.todoRepository.save(todoEntity);
     }
 
@@ -41,8 +41,8 @@ public class TodoService {
         if (request.getOrder() != null) {
             todoEntity.setOrder(request.getOrder());
         }
-        if (request.getIsCompleted() != null) {
-            todoEntity.setIsCompleted(request.getIsCompleted());
+        if (request.getCompleted() != null) {
+            todoEntity.setCompleted(request.getCompleted());
         }
         return this.todoRepository.save(todoEntity);
     }

@@ -12,14 +12,14 @@ public class TodoResponse {
     private Long id;
     private String title;
     private Long order;
-    private Boolean isCompleted;
+    private Boolean completed;
     private String url;
 
     public TodoResponse(TodoEntity todoEntity) {
         this.id = todoEntity.getId();
         this.title = todoEntity.getTitle();
         this.order = todoEntity.getOrder();
-        this.isCompleted = todoEntity.getIsCompleted();
+        this.completed = todoEntity.getCompleted();
 
         this.url = "http://localhost:8080/" + this.id; // 추후에 하드코딩 따로 관리 필요
     }
